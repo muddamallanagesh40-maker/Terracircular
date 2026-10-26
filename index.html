@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muddamalla's TerraCircular | Property & Wealth Advisory India</title>
+    <title>Muddamalla's TerraCircular | Premium Property & Financial Advisory</title>
     <style>
         :root {
-            --primary-gold: #C5A059;
-            --dark-gold: #9A7B3E;
-            --light-gold: #F4E8D1;
-            --dark-text: #2C2C2C;
-            --light-bg: #FAFAFA;
+            --royal-black: #0B0C10;
+            --deep-gold: #8E6F3E;
+            --bright-gold: #D4AF37;
+            --metallic-gold: #C5A059;
+            --champagne-gold: #F3E5AB;
+            --creme-bg: #11141A;
             --white: #FFFFFF;
-            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --card-bg: #161A23;
+            --font-display: 'Cinzel', 'Playfair Display', Georgia, serif;
+            --font-sans: 'Montserrat', 'Segoe UI', sans-serif;
         }
 
         * {
@@ -22,336 +25,313 @@
         }
 
         body {
-            font-family: var(--font-family);
-            color: var(--dark-text);
-            line-height: 1.6;
-            background-color: var(--white);
+            font-family: var(--font-sans);
+            color: var(--champagne-gold);
+            background-color: var(--royal-black);
+            line-height: 1.7;
         }
 
+        /* Royal Header Navigation */
         header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background: linear-gradient(to bottom, #000000, rgba(11, 12, 16, 0.95));
+            border-bottom: 2px solid var(--deep-gold);
             position: sticky;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 20px;
         }
 
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
         }
 
+        /* Logo Configuration - Ensures Max Clarity */
         .logo-img {
-            width: 55px;
-            height: 55px;
+            width: 70px;
+            height: 70px;
             object-fit: contain;
             border-radius: 50%;
-            border: 2px solid var(--primary-gold);
+            border: 2px solid var(--bright-gold);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            image-rendering: -webkit-optimize-contrast; /* Webkit crispness */
+            image-rendering: crisp-edges;
         }
 
         .brand-name h1 {
-            font-size: 1.2rem;
-            color: var(--dark-gold);
-            letter-spacing: 1px;
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--bright-gold);
+            letter-spacing: 2px;
             text-transform: uppercase;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .brand-name p {
-            font-size: 0.75rem;
-            color: var(--dark-text);
-            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+            color: var(--white);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            opacity: 0.9;
         }
 
+        /* Premium Sub-Menu Navigation Modules */
         nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 35px;
+            align-items: center;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: var(--dark-text);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            font-family: var(--font-display);
+            padding: 5px 10px;
         }
 
-        nav ul li a:hover {
-            color: var(--primary-gold);
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--bright-gold);
+            border-bottom: 2px solid var(--bright-gold);
+            text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
         }
 
         .cta-nav-btn {
-            background-color: var(--primary-gold);
-            color: var(--white);
-            padding: 10px 20px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            background: linear-gradient(135deg, var(--deep-gold), var(--bright-gold));
+            color: var(--royal-black) !important;
+            padding: 12px 25px !important;
+            border-radius: 0px;
+            font-weight: 700 !important;
+            border: 1px solid var(--champagne-gold);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
         }
 
         .cta-nav-btn:hover {
-            background-color: var(--dark-gold);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--bright-gold), var(--champagne-gold)) !important;
+            border-bottom: 1px solid var(--champagne-gold) !important;
+            transform: translateY(-2px);
         }
 
+        /* Hero Showcase - Ultra Royal & Gold */
         .hero {
-            background: linear-gradient(135deg, var(--light-gold) 0%, #FFFFFF 100%);
-            padding: 100px 20px;
+            background: radial-gradient(circle at center, rgba(142, 111, 62, 0.3) 0%, rgba(11, 12, 16, 1) 70%), url('https://unsplash.com') no-repeat center center/cover;
+            padding: 140px 20px;
             text-align: center;
+            border-bottom: 1px solid var(--deep-gold);
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            background: rgba(11, 12, 16, 0.85);
+            padding: 50px;
+            border: 1px solid var(--deep-gold);
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.7);
         }
 
         .hero h2 {
-            font-size: 2.8rem;
-            color: var(--dark-text);
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-family: var(--font-display);
+            font-size: 3.2rem;
+            color: var(--white);
+            margin-bottom: 25px;
+            line-height: 1.3;
+            letter-spacing: 1px;
         }
 
         .hero h2 span {
-            color: var(--dark-gold);
+            color: var(--bright-gold);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 40px;
+            font-size: 1.25rem;
+            color: var(--champagne-gold);
+            margin-bottom: 45px;
+            opacity: 0.9;
         }
 
         .btn-group {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         .primary-btn {
-            background-color: var(--dark-gold);
-            color: var(--white);
-            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--deep-gold), var(--bright-gold));
+            color: var(--royal-black);
+            padding: 18px 40px;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 1px solid var(--champagne-gold);
         }
 
         .primary-btn:hover {
-            background-color: var(--primary-gold);
+            background: linear-gradient(135deg, var(--bright-gold), var(--champagne-gold));
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+            transform: translateY(-2px);
         }
 
-        .secondary-btn {
-            border: 2px solid var(--dark-gold);
-            color: var(--dark-gold);
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-
-        .secondary-btn:hover {
-            background-color: var(--dark-gold);
-            color: var(--white);
-        }
-
-        .mission {
-            max-width: 1200px;
-            margin: 80px auto;
+        /* Strategic Advisory Modules */
+        .section-container {
+            max-width: 1300px;
+            margin: 100px auto;
             padding: 0 20px;
+        }
+
+        .center-title {
             text-align: center;
+            margin-bottom: 60px;
         }
 
         .section-title {
-            font-size: 2rem;
-            color: var(--dark-text);
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--bright-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 15px;
-            position: relative;
-            padding-bottom: 10px;
         }
 
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary-gold);
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+        .gold-divider {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--bright-gold), transparent);
+            margin: 0 auto;
         }
 
-        .mission p {
-            max-width: 800px;
-            margin: 25px auto 0 auto;
-            font-size: 1.1rem;
-            color: #666;
+        /* Modules: About Section */
+        #about p {
+            max-width: 900px;
+            margin: 30px auto 0 auto;
+            font-size: 1.2rem;
+            color: var(--white);
+            text-align: center;
+            opacity: 0.95;
         }
 
-        .services-container {
-            background-color: var(--light-bg);
-            padding: 80px 20px;
-        }
-
+        /* Modules: Services Section Layout */
         .services-grid {
-            max-width: 1200px;
-            margin: 40px auto 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 5px;
         }
 
         .service-card {
-            background-color: var(--white);
-            padding: 40px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            border-top: 4px solid var(--primary-gold);
-            transition: transform 0.3s ease;
+            background-color: var(--card-bg);
+            padding: 50px 40px;
+            border: 1px solid rgba(142, 111, 62, 0.4);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--deep-gold), var(--bright-gold));
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            border-color: var(--bright-gold);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15);
         }
 
         .service-card h4 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: var(--dark-text);
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            color: var(--bright-gold);
+            letter-spacing: 1px;
         }
 
         .service-card ul {
-            list-style-position: inside;
-            color: #555;
-            text-align: left;
-            list-style-type: square;
+            list-style: none;
         }
 
         .service-card ul li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+            color: var(--white);
+            font-size: 1.05rem;
+        }
+
+        .service-card ul li::before {
+            content: '🔶';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.8rem;
+        }
+
+        /* Modules: Advices Section Layout */
+        .advices-panel {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #000000 100%);
+            padding: 50px;
+            border: 1px solid var(--deep-gold);
+            margin-top: 40px;
+        }
+
+        .advice-item {
+            border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+            padding: 25px 0;
+        }
+
+        .advice-item:last-child {
+            border-bottom: none;
+        }
+
+        .advice-item h5 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--bright-gold);
             margin-bottom: 10px;
         }
 
+        /* Gold Registration Framework */
         .contact-section {
-            max-width: 600px;
-            margin: 80px auto;
-            padding: 0 20px;
+            max-width: 650px;
+            margin: 120px auto;
+            padding: 50px 40px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--deep-gold);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
             text-align: center;
         }
 
         .contact-form {
-            margin-top: 30px;
+            margin-top: 40px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
         }
 
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #CCC;
-            border-radius: 4px;
-            font-family: var(--font-family);
-            font-size: 1rem;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--dark-gold);
-            outline: none;
-        }
-
-        .submit-btn {
-            background-color: var(--dark-gold);
-            color: var(--white);
             padding: 15px;
-            border: none;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        .submit-btn:hover {
-            background-color: var(--primary-gold);
-        }
-
-        footer {
-            background-color: var(--dark-text);
-            color: var(--white);
-            padding: 40px 20px;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        footer p {
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            nav { display: none; }
-            .hero h2 { font-size: 2rem; }
-            .btn-group { flex-direction: column; gap: 10px; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="nav-container">
-            <div class="logo-area">
-                <img src="logo.png" alt="Muddamalla's TerraCircular Logo" class="logo-img">
-                <div class="brand-name">
-                    <h1>Muddamalla's</h1>
-                    <p>TerraCircular</p>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">Our Motto</a></li>
-                    <li><a href="#services">Advisory</a></li>
-                    <li><a href="#contact" class="cta-nav-btn">Get Callback</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Creating Sustainable <span>Property & Wealth Circulation</span> Across All Indian Families</h2>
-            <p>We bridge the asset gap. Offering comprehensive real estate portfolios and tactical financial roadmaps customized across every single income layer in India.</p>
-            <div class="btn-group">
-                <a href="#contact" class="primary-btn">Connect With Advisor</a>
-                <a href="#services" class="secondary-btn">View Services</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="mission">
-        <h3 class="section-title">The TerraCircular Motto</h3>
-        <p>Stagnant resources limit family growth. At Muddamalla's TerraCircular, we believe that strategic property distribution and structural wealth literacy should not be locked behind high-net-worth barriers. We assist families nationwide to enter, scale, and successfully circulate assets through generations.</p>
-    </section>
-
-    <section id="services" class="services-container">
-        <div style="text-align: center;">
-            <h3 class="section-title">Our Specialized Verticals</h3>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <h4>🏡 Property Advisory</h4>
-                <ul>
-                    <li>Affordable Housing Procurement Strategies</li>
-                    <li>RERA-Compliant Tier-1 & Tier-2 Asset Sourcing</li>
-                    <li>Joint-Venture Optimization & Commercial Leasing</li>
-                </ul>
-            </div>
+            background-color: var(--royal-black);
